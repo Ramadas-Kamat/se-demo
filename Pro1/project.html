@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<TITLE>
+	Registration to ODD semester
+</TITLE>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	 <script type="text/JavaScript" src = "function.js" ></script> 
+	<!-- Links to JS and CSS files -->
+	<h1><b>UNIVERSITY OF ASGARD</b></h1>
+</head>
+
+<body>
+	<BR><img class= "img" src="https://cdn.britannica.com/42/13442-004-D4870F87/Law-quadrangle-Mich-University-of-Michigan-Ann.jpg"><BR>
+	<!-- A description about the form-->
+
+	<h2>Welcome to the ODD SEMESTER 2020</h2>
+	
+	<div id = "brief">
+		This is the registration form to enroll for the current <b>ODD Semester</b>. Students are required to fill in all the details.<br> The deadline to submit this form is 10th November 2020. For more information visit our <a href = "https://marvelcinematicuniverse.fandom.com/wiki/Asgard" >website.</a>
+	</div>
+	<BR></BR>
+	<form >
+		<!-- Different divisions for various input elements -->
+		<div id = "div">
+			<label for="f1">First name:</label><br>
+			<input type="text" id = "f1" name="FirstName" placeholder="Prakash" onblur=
+			 "checkname1();"> 	<!--Validation -->
+			<span id = "sf1"></span><BR></BR>
+
+			<label for="f2">Last name:</label><br>
+			<input id = "f2" type="text" name="LastName" placeholder="Patel" onblur= 
+			"checkname2();">	<!-- Validation -->
+			<span id = "sf2"></span><BR></BR>
+
+			<label for="usn">USN:</label><br>
+			<input id="usn" type = "text" placeholder="1AG18CS000">
+			<br><br>
+
+			<label for="usn">Email:</label><br>
+			<input id="mail" type = "email" placeholder="abc@xmail.com" onblur="checkmail();">
+			<span id = "sf3"></span><BR></BR>	<!-- Validation -->
+		</div>
+		
+
+		<div id = "div1">
+			<label for="rd">Select semester:</label><br>	<!-- Radio buttons -->
+			<input id = "rd" type = "radio" name = "sem" required>3<br>
+			<input type = "radio" name = "sem" required>5<br>
+			<input type = "radio" name = "sem" required>7<br>
+			
+		</div>
+		<BR></BR>
+
+		<div id = "div2">
+			<label for="rd">Date of Admission: </label><br>
+			<input type="Date" name="cal"><BR>
+		</div>
+		<BR></BR>
+
+		<div id="div3">		<!-- Check boxes -->
+			<br>Select the Innovative Clubs you are willing to join or are currently a part of:<br>
+			<br><input type="checkbox" name="c1">Coding Club
+			<br><input type="checkbox" name="c2">Electric Club
+			<br><input type="checkbox" name="c3">Mechadrone Club
+			<br><input type="checkbox" name="c4">Bio Club
+			<br><input type="checkbox" name="c5">Sports Club
+			<br><input type="checkbox" name="c6">Cultural and Debating Society
+		</div>
+
+		<br><br>Make sure you have entered the correct details before submitting<br>
+		<br><input id = "sb" type="button" name="Submit" value="Submit" onclick="respond();">
+		<br><input type='submit' name='Press' value='Press'>
+		<!-- Just a button type input and not a submit button-->
+
+	</form>
+</body>

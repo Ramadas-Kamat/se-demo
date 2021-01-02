@@ -1,0 +1,47 @@
+head{
+	background: transparent;
+}
+
+
+
+body{
+	background-color : yellow;
+	margin: 10px 25px;				/* Yellow background and padding*/
+}
+
+h1{
+	text-align: center;				/* Alignment and font style*/
+	font-family: Courier;
+}
+
+h2{									/* Font style */
+	font-family: monospace;
+}
+
+#mail, #usn, #f1, #f2{
+	text-overflow: ellipsis;		/* Determines the view how text appears
+									after the maximum size of box is reached*/
+}
+
+.img{
+	padding: 10px;					/* Customising image position*/
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	width: 50%;
+}
+
+/* Customised fonts and backgroud for different divisions */
+#div{
+	font-family: Times;
+}
+#div1{
+	background: rgb(250,10,10);
+}
+
+
+
+#div3{
+	background: rgb(0,200,0);
+	font-family: sans-serif;
+}
