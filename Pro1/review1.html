@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+<html>
+<head><title>Final Project</title>
+<link rel = "stylesheet" href = "finalstyles.css"/>
+</head>
+<script>
+alert('Welcome to the register page ! Sign Up and get started!');
+function validateFirstname(){
+var fname = document.getElementById("firstname").value;//takes the value of the firstname
+if(fname==""){
+document.getElementById("fname").innerHTML = "Please enter your first name !"//checks if string is empty
+document.getElementById("fname").style.color = "red";
+}
+else{
+document.getElementById("fname").innerHTML = "Valid";
+document.getElementById("fname").style.color = "lightgreen";
+}
+}
+function validateLastname(){
+var lname = document.getElementById("lastname").value;//takes the value of the lastname
+if(lname==""){
+document.getElementById("lname").innerHTML = "Please enter your last name !"
+document.getElementById("lname").style.color = "red";
+}
+else{
+document.getElementById("lname").innerHTML = "Valid";
+document.getElementById("lname").style.color = "lightgreen";
+}
+}
+function PhoneNumber(){
+var number = document.getElementById("phone").value;
+if(number==""){
+document.getElementById("phn").innerHTML = "Please enter your number!"
+document.getElementById("phn").style.color = "red";//red output shown if invalid input made
+}
+else if(number.length<11){
+document.getElementById("phn").innerHTML = "Number must be of 11 digits";
+document.getElementById("phn").style.color = "red";
+}
+else{
+document.getElementById("phn").innerHTML = "Valid number";
+document.getElementById("phn").style.color = "lightgreen";//green output indicates valid entry
+}
+}
+
+function last(){
+document.getElementById("register").innerHTML = "Thank you!";
+document.getElementById("register").style.color = "violet";
+}
+
+</script>
+<body>
+
+<h2 class = "heading">Sign Up to register</h2>
+
+<p style = "margin-left:700px;">Already have an account? &nbsp; &nbsp;
+<button>Login</button>
+</p>
+<table>
+<tr>
+<td>
+<img src = "skills.jpg" class = "pic1"/>
+</td>
+<td><div class = "form_layout">
+<!--The personal information is collected through the fields below-->
+<table>
+	<tr>
+		<td>Firstname:</td>
+		<td><input type = "text" id = "firstname" onblur = "validateFirstname();"/>
+		&nbsp;&nbsp;<span id = "fname"></span>
+		</td>
+	</tr>
+
+	<tr>
+		<td>Lastname:</td>
+		<td><input src = "text" id = "lastname" onblur  = "validateLastname();"/>&nbsp;&nbsp;
+		<span id = "lname"></span></td>
+	</tr>
+	<tr>
+		<td>Date of Birth:</td>
+		<td><input type = "date" id = "birthdate"/>&nbsp;&nbsp;
+		<a href = "birthdate.html" target = "_blank" style = "text-decoration:none; color:blue;"><em>Why do I need to provide my birthdate??</em></a>
+		</td>
+		
+	</tr>
+	<tr>
+		<td>Feild of Interest:</td>
+		<td><textarea style = "height:57px;" placeholder = "Tell us something about what you are interested in learning!"></textarea></td>
+	</tr>
+	<tr>
+		<td>Phone Number:</td>
+		<td><input type = "tel" id = "phone" onblur = "PhoneNumber();"/>
+		<span id = "phn"></span></td>
+		
+	</tr>
+	
+	<tr>
+		<td>Profile Photo:</td>
+		<td><input type = "file"/>
+	</tr>
+	<tr>
+		<td>Password:</td>
+		<td style = "color:blue;"><input type = "password"/> &nbsp;&nbsp;
+		<em>must be of atleast 6 characters<em></td>
+	</tr>
+
+	<tr>
+		<td>Confirm Password:</td>
+		<td><input type = "password"/></td>
+	</tr>
+	
+	
+		<td>Number of Courses<br/> I am willing to take:</td>
+		<td><input type = "number" min = "1" max = "10"/></td>
+	</tr>
+
+</table>
+
+<!--selection of gender-->
+<label class = "gender">Gender:</label>&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<input type = "radio" id = "male" name = "gender"/>
+<label class = "gender" for = "male">Male</label>
+
+<input type = "radio" id = "female" name = "gender"/>
+<label class = "gender" for = "female">Female</label>
+<table>
+	<tr>
+		<td>Skills I own:</td>
+	</tr>
+	<tr>
+		<td>
+		<table>
+		<tr><input type = "checkbox" value = "MS Word"/>MS Word</tr><br/>
+		<tr><input type = "checkbox" value = "MS Excel"/>MS Excel</tr><br/>
+        <tr><input type = "checkbox" value= "MS Powerpoint"/>MS Powerpoint<tr><br/>
+		<tr><input type = "checkbox" value = "MS Word"/>Basic Programming Knowledge</tr><br/>
+		<tr><input type = "checkbox" value = "MS Excel"/>Photoshop</tr><br/>
+        <tr><input type = "checkbox" value= "MS Powerpoint"/>Graphics Design<tr><br/>
+		</table>
+		</td>
+	</tr>
+	</table>
+	
+<button style = "background-color:lightgreen;color:black;"  onclick = "last();">Register</button>
+<span id = "register"></span>
+</div>
+</td>
+<td>
+<img src = "jumble.jpg" class = "pic2"/>
+</td>
+
+</tr>
+</table>
+
+
+
+</body>
+</html>
