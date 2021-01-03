@@ -4,3 +4,6 @@ pipelines:
     - step:
         script:
           - pip install -r requirements.txt
+          - python manage.py test
+          - python manage.py migrate
+          - python manage.py runserver
